@@ -21,3 +21,9 @@
 ![Tela Principal](image/HomeScreen.png)
 
 <hr>
+
+## <b>Tela HOME</b> 
+
+![Tela Principal](image/home.png)
+
+<hr>
