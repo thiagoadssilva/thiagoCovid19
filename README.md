@@ -2,7 +2,7 @@
 * Projeto em Reactjs, onde vou está aplicando alguns conceitos aprendidos e com algumas modificações, esse projeto vai mostrar as estatisticas sobre o covid19 e com algumas informações a mais.
 
 * Dentro do <b>README</b> da pasta do projeto está tudo que está sendo usando.
-   * https://github.com/thiagoadssilva/thiagoListaTarefas/blob/main/frontend/README.md
+   * https://github.com/thiagoadssilva/thiagoCovid19/blob/main/frontend/README.md
 
 <hr>
 
@@ -18,6 +18,6 @@
 
 ## <b>Tela de Inicio</b> 
 
-![Tela Principal](images/homeScreen.png)
+![Tela Principal](image/HomeScreen.png)
 
 <hr>
