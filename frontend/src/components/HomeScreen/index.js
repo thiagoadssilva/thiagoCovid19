@@ -22,9 +22,8 @@ export default () => {
         </ContainerLabelLogin>
 
         <A href="/home">
-        <ContainerImageLogin src={imageLogin} alt="Login" />
+          <ContainerImageLogin src={imageLogin} alt="Login" />
         </A>
-        
 
       </ContainerLogin>
     </Container>

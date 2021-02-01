@@ -5,8 +5,8 @@ import HomeScreen from './components/HomeScreen';
 import Home from './components/Home';
 
 const routes ={
-  '/': () => <HomeScreen />,
-  '/home': () => <Home />
+  '/home': () => <Home />,
+  '/homeScreen': () => <HomeScreen />
 }
 
 function App() {
