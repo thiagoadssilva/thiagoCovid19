@@ -1,2 +1,23 @@
-# thiagoCovid19
-Projeto de treinamento da tecnologia reactjs.
+# Projeto COVID-19
+* Projeto em Reactjs, onde vou está aplicando alguns conceitos aprendidos e com algumas modificações, esse projeto vai mostrar as estatisticas sobre o covid19 e com algumas informações a mais.
+
+* Dentro do <b>README</b> da pasta do projeto está tudo que está sendo usando.
+   * https://github.com/thiagoadssilva/thiagoListaTarefas/blob/main/frontend/README.md
+
+<hr>
+
+## Protótipo criado com a plataforma 'FIGMA'
+  * https://www.figma.com/proto/RMgm71Fx6cXt8INJdpRKfz/PROJETO-COVID?node-id=0%3A3&scaling=scale-down
+
+<hr/>
+
+## Projeto Publicado
+- http://listatarefa.tfcoder.com/???
+
+<hr/>
+
+## <b>Tela de Inicio</b> 
+
+![Tela Principal](images/homeScreen.png)
+
+<hr>
