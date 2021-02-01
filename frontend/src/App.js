@@ -1,11 +1,16 @@
-import React from  'react';
+import React from 'react';
+import { useRoutes } from 'hookrouter';
+
+import HomeScreen from './components/HomeScreen';
+import Home from './components/Home';
+
+const routes ={
+  '/': () => <HomeScreen />,
+  '/home': () => <Home />
+}
 
 function App() {
-  return (
-    <div className="App">
-      thiago jose da silva
-    </div>
-  );
+  return (useRoutes(routes));
 }
 
 export default App;
