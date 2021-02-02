@@ -27,3 +27,9 @@
 ![Tela Principal](image/home.png)
 
 <hr>
+
+## <b>Tela SOBRE</b> 
+
+![Tela Principal](image/sobre.png)
+
+<hr>
