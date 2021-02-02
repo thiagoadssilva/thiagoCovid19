@@ -1,17 +1,12 @@
 import React, {useState} from 'react';
-import imageCovid from '../../image/home.jpg';
-import { A } from 'hookrouter';
-import imageLogout from '../../image/sair.ico';
+
 import ContainerItemNotice from '../ContainerItemNotice';
+import HeaderMenu from '../HeaderMenu';
+import Footer from '../Footer';
 
 import {
   Container,
-  ContainerHeader,
-  ContainerImage,
-  ContainerMenus,
-  ContainerImageLogou,
   ContainerItemHome,
-  ContainerFooter
 } from './styled';
 
 export default () => {
@@ -19,30 +14,8 @@ export default () => {
 
   return (
     <Container>
-      <ContainerHeader>
-        <ContainerImage src={imageCovid} alt="Covid" />
-        <ContainerMenus>
-          <A href="/home">
-            Home
-          </A>
-          <A href="/graficos">
-            Graficos
-          </A>
-
-          <A href="/painelCovid">
-            Painel da COVID - 19
-          </A>
-
-          <A href="/sobre">
-            Sobre
-          </A>
-
-          <A href="/homeScreen">
-            Sair
-            <ContainerImageLogou src={imageLogout} alt="Covid" />
-          </A>
-        </ContainerMenus>
-      </ContainerHeader>
+      
+      <HeaderMenu />
 
       <ContainerItemHome>
           <ContainerItemNotice text={'O QUE É COVID - 19'} />
@@ -56,10 +29,7 @@ export default () => {
           <ContainerItemNotice text={'FAKE NEWS'} />
       </ContainerItemHome>
 
-      <ContainerFooter>
-        Todos contra a COVID - 19
-      </ContainerFooter>
-
+      <Footer />
 
     </Container>
   );

@@ -3,10 +3,12 @@ import { useRoutes } from 'hookrouter';
 
 import HomeScreen from './components/HomeScreen';
 import Home from './components/Home';
+import About from './components/About';
 
 const routes ={
   '/home': () => <Home />,
-  '/homeScreen': () => <HomeScreen />
+  '/homeScreen': () => <HomeScreen />,
+  '/sobre': () => <About />
 }
 
 function App() {
