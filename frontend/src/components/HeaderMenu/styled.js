@@ -31,11 +31,9 @@ export const ContainerMenus = styled.div`
     padding-right: 30px;
     text-decoration-line:none;
     color: black;
-    transition: 0.1s;
-    
 
     &:hover{
-      background-color: #FFFFFF;    
+      font-weight: bold;
     }
   }
 `;
