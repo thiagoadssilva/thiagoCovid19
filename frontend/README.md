@@ -40,3 +40,10 @@
 * Referências: https://www.npmjs.com/package/axios
 
 <hr>
+
+## Material-UI
+    yarn add @material-ui/core --save
+
+* Referências: https://material-ui.com/pt/getting-started/installation/
+
+<hr>
