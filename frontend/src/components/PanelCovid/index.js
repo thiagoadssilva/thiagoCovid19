@@ -17,12 +17,19 @@ import {
 export default () => {
   const [information, setInformation] = useState([]);
   const [valueRadio, setValueRadio] = useState('states');
+  const [inputSearch, setInputSearch] = useState('');
+
+  console.log(inputSearch);
 
   function handleChangeRadio(event) {
     setValueRadio(event.target.value);
   }
 
-  useEffect(() => {
+  function handleChangeSearch(event){
+    setInputSearch(event.target.value);
+  }
+
+  useEffect((event) => {
     async function getInformation() {
       try {
         let { data } = await Api.get();
@@ -55,13 +62,10 @@ export default () => {
         <ContainerFilterSearch>
           <Form>
             <Form.Group>
-              <Form.Label style={{margin: '15px'}}>Informe o seu estado ou país:</Form.Label>
-              <Form.Control style={{backgroundColor: '#85C3FF', borderRadius: '5px', margin: '15px', width: '1050px'}} type="text" />
+              <Form.Label style={{ margin: '15px' }}>Informe o seu estado ou país:</Form.Label>
+              <Form.Control style={{ backgroundColor: '#85C3FF', borderRadius: '5px', margin: '15px', width: '1050px' }} onChange={handleChangeSearch} value={inputSearch} type="text" />
             </Form.Group>
           </Form>
-          <Button style={{backgroundColor: '#85C3FF'}} type="submit">
-            Pesquisar
-          </Button>
         </ContainerFilterSearch>
 
 

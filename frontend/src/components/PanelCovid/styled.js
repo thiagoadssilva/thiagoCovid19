@@ -21,9 +21,6 @@ export const ContainerFilterRadio = styled.div`
 `;
 
 export const ContainerFilterSearch = styled.div`
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
     flex: 1;
     margin: 15px;
     width: 150px;

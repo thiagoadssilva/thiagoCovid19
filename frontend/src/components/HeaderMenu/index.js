@@ -32,7 +32,7 @@ export default () => {
             Sobre
           </A>
 
-          <A href="/homeScreen">
+          <A href="/">
             Sair
             <ContainerImageLogou src={imageLogout} alt="Covid" />
           </A>

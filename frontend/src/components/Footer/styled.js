@@ -5,8 +5,32 @@ export const Container = styled.div`
 export const ContainerFooter = styled.div`
   background-color: #EEEEEE;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-weight: bold;
   height: 50px;
+`;
+
+export const DescriptionLinkGit = styled.a`
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: 15px;
+`;
+export const DescriptionLinkLinkedin = styled.a`
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: 15px;
+`;
+
+export const ImageGit = styled.img`
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+`;
+export const ImageLik = styled.img`
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
 `;
