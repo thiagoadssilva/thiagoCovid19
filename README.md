@@ -33,3 +33,9 @@
 ![Tela Principal](image/sobre.png)
 
 <hr>
+
+## <b>Tela do PAINEL DA COVID-19</b> 
+
+![Tela Principal](image/painelCovid.png)
+
+<hr>
