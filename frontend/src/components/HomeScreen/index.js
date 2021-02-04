@@ -1,12 +1,12 @@
 import React from 'react';
 import imageHomeScreen from '../../image/home.jpg';
-import imageLogin from '../../image/iconeEntrar.png';
 import { A } from 'hookrouter';
+import Button from '@material-ui/core/Button';
+
 
 import {
   Container,
   ContainerImageHomeScreen,
-  ContainerImageLogin,
   ContainerLogin,
   ContainerLabelLogin
 } from './styled';
@@ -22,7 +22,7 @@ export default () => {
         </ContainerLabelLogin>
 
         <A href="/home">
-          <ContainerImageLogin src={imageLogin} alt="Login" />
+          <Button variant="contained">Entrar</Button>
         </A>
 
       </ContainerLogin>

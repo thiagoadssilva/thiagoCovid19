@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    background-color: #000000;
 `;
 
 export const ContainerBody = styled.div`
@@ -8,7 +9,7 @@ export const ContainerBody = styled.div`
     justify-content: center;
     flex-direction: column;
     
-    background-color: #FFFFFF;
+    background-color: #000000;
     height: 100vh;
     margin: 15px;
 `;

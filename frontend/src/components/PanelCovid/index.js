@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import HeaderMenu from '../HeaderMenu';
 import Footer from '../Footer';
 import Api from '../../services/Api';
 import PanelCovidItem from '../PanelCovidItem';
 import { Form, Button } from 'react-bootstrap';
 import { FormControl, RadioGroup, FormControlLabel, Radio } from '@material-ui/core';
-
 
 import {
   Container,
@@ -16,37 +15,96 @@ import {
 
 export default () => {
   const [information, setInformation] = useState([]);
+  const [uniqueState, setUniqueState] = useState();
   const [valueRadio, setValueRadio] = useState('states');
   const [inputSearch, setInputSearch] = useState('');
-
-  console.log(inputSearch);
 
   function handleChangeRadio(event) {
     setValueRadio(event.target.value);
   }
 
-  function handleChangeSearch(event){
+  // async function handleChangeSearch(event) {
+  //   setInputSearch(event.target.value);
+  //   const actualState = event.target.value;
+
+  //   try {
+  //     let { data } = await Api.get(`/brazil/uf/${actualState}`);
+  //     console.log(data);
+  //     setUniqueState(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+  const handleChangeSearch = useCallback(async (event) => {
     setInputSearch(event.target.value);
+    const actualState = event.target.value;
+
+    try {
+      let { data } = await Api.get(`/brazil/uf/${actualState}`);
+      console.log(data);
+      setUniqueState(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [])
+
+  useEffect(() => {
+    // async function getInformation() {
+    //   try {
+    //     let { data } = await Api.get();
+    //     console.log(data);
+    //     setInformation(data.data);
+
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // }
+    // getInformation();
+
+    Api.get("/")
+      .then(({ data }) => setInformation(data.data))
+      .catch(error => console.log(error));
+
+  }, [])
+
+  function renderSwitch(param) {
+    console.log(param);
+    switch (param) {
+      case 'states':
+      default:
+        return (
+          information.map(item => (
+            <div >
+              <PanelCovidItem item={item} />
+            </div>
+          ))
+        )
+      case 'brazil/uf/':
+        if (!uniqueState) {
+          return (
+            information.map(item => (
+              <div >
+                <PanelCovidItem item={item} />
+              </div>
+            )))
+        }
+        return (
+          <div>
+            <PanelCovidItem item={uniqueState} />
+          </div>
+        )
+    }
   }
 
-  useEffect((event) => {
-    async function getInformation() {
-      try {
-        let { data } = await Api.get();
-        setInformation(data.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    getInformation();
-  }, [])
+
 
   return (
     <Container>
       <HeaderMenu />
 
-
       <ContainerFilter>
+
         <ContainerFilterRadio>
           <FormControl component="fieldset">
             <RadioGroup aria-label="gender" name="gender1" value={valueRadio} onChange={handleChangeRadio}>
@@ -58,7 +116,6 @@ export default () => {
           </FormControl>
         </ContainerFilterRadio>
 
-
         <ContainerFilterSearch>
           <Form>
             <Form.Group>
@@ -68,17 +125,39 @@ export default () => {
           </Form>
         </ContainerFilterSearch>
 
-
+        <select name="estados-brasil" onChange={handleChangeSearch}>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
 
       </ContainerFilter>
+      {renderSwitch(valueRadio)}
 
-      {information.map(item =>
-        <div key={item.uid}>
-          {/* {console.log(item)} */}
-          <PanelCovidItem item={item} />
-        </div>
-
-      )}
       <Footer />
     </Container>
   );

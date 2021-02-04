@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
+  background-color: #000000;
+  height: 100%;
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
 `;
 
 export const ContainerItemHome = styled.div`
@@ -9,8 +14,7 @@ export const ContainerItemHome = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 10px;
-  background-color: #FFFFFF;
+  background-color: #000000;
   height: 100vh;
   border-radius: 15px;
 `;

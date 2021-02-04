@@ -15,6 +15,7 @@ import {
 } from './styled';
 
 export default (props) => {
+
   return (
     <Container>
       <ContainerInformation>

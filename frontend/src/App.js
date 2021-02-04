@@ -5,12 +5,15 @@ import HomeScreen from './components/HomeScreen';
 import Home from './components/Home';
 import About from './components/About';
 import PanelCovid from './components/PanelCovid';
+import Information from './components/Information';
 
 const routes ={
-  '/home': () => <Home />,
   '/': () => <HomeScreen />,
+  '/home': () => <Home />,
   '/sobre': () => <About />,
-  '/painelCovid': () => <PanelCovid />
+  '/painelCovid': () => <PanelCovid />,
+  '/information/:id': ({id}) => <Information id={id}/>
+  
 }
 
 function App() {
