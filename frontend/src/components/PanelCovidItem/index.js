@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   Container,
@@ -15,9 +15,11 @@ import {
 } from './styled';
 
 export default (props) => {
+  const [control, setControl] = useState(props.controlHeight);
 
   return (
-    <Container>
+    
+    <Container control={control}>
       <ContainerInformation>
         <ContainerTitleInformation>{props.item.state}</ContainerTitleInformation>
         <Teste>

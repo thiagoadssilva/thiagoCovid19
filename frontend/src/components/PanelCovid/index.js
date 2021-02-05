@@ -10,16 +10,25 @@ import {
   Container,
   ContainerFilter,
   ContainerFilterRadio,
-  ContainerFilterSearch
+  ContainerFilterSearch,
+  ContainerSelect,
+  ContainerSelectTitle
 } from './styled';
 
 export default () => {
   const [information, setInformation] = useState([]);
   const [uniqueState, setUniqueState] = useState();
   const [valueRadio, setValueRadio] = useState('states');
-  const [inputSearch, setInputSearch] = useState('');
+  const [displayControl, setDisplayControl] = useState(false);
+  const [controlHeight, setControlHeight] = useState(true);
 
   function handleChangeRadio(event) {
+    if (event.target.value === 'states') {
+      setUniqueState('');
+      setDisplayControl(true);
+    }else{
+      setDisplayControl(false);
+    }
     setValueRadio(event.target.value);
   }
 
@@ -37,12 +46,10 @@ export default () => {
   // }
 
   const handleChangeSearch = useCallback(async (event) => {
-    setInputSearch(event.target.value);
     const actualState = event.target.value;
 
     try {
       let { data } = await Api.get(`/brazil/uf/${actualState}`);
-      console.log(data);
       setUniqueState(data);
     } catch (error) {
       console.log(error);
@@ -61,7 +68,7 @@ export default () => {
     //   }
     // }
     // getInformation();
-
+    setDisplayControl(true);
     Api.get("/")
       .then(({ data }) => setInformation(data.data))
       .catch(error => console.log(error));
@@ -69,7 +76,6 @@ export default () => {
   }, [])
 
   function renderSwitch(param) {
-    console.log(param);
     switch (param) {
       case 'states':
       default:
@@ -91,16 +97,14 @@ export default () => {
         }
         return (
           <div>
-            <PanelCovidItem item={uniqueState} />
+            <PanelCovidItem item={uniqueState} controlHeight={controlHeight} />
           </div>
         )
     }
   }
 
-
-
   return (
-    <Container>
+    <Container valueRadio={valueRadio}>
       <HeaderMenu />
 
       <ContainerFilter>
@@ -116,45 +120,44 @@ export default () => {
           </FormControl>
         </ContainerFilterRadio>
 
-        <ContainerFilterSearch>
-          <Form>
-            <Form.Group>
-              <Form.Label style={{ margin: '15px' }}>Informe o seu estado ou país:</Form.Label>
-              <Form.Control style={{ backgroundColor: '#85C3FF', borderRadius: '5px', margin: '15px', width: '1050px' }} onChange={handleChangeSearch} value={inputSearch} type="text" />
-            </Form.Group>
-          </Form>
-        </ContainerFilterSearch>
-
-        <select name="estados-brasil" onChange={handleChangeSearch}>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-        </select>
-
+        {!displayControl &&
+          <ContainerFilterSearch>
+            <ContainerSelectTitle>
+              Informe um estado ou país:
+          </ContainerSelectTitle>
+            <ContainerSelect>
+              <select style={{backgroundColor: '#85C3FF'}} onChange={handleChangeSearch} className="browser-default custom-select">
+                <option value="">Selecione</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+            </ContainerSelect>
+          </ContainerFilterSearch>
+        }
       </ContainerFilter>
       {renderSwitch(valueRadio)}
 

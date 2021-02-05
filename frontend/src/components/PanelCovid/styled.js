@@ -21,6 +21,9 @@ export const ContainerFilterRadio = styled.div`
 `;
 
 export const ContainerFilterSearch = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
     margin: 15px;
     width: 150px;
@@ -28,6 +31,20 @@ export const ContainerFilterSearch = styled.div`
     border-radius: 15px;
     background-color: #0085FF;
 `;
+
+export const ContainerSelect = styled.div`
+    margin: 15px;
+    margin-top: 0;
+`;
+
+export const ContainerSelectTitle = styled.label`
+    margin: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+`;
+
 
 
 
