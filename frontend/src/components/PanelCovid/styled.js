@@ -42,7 +42,6 @@ export const ContainerSelectTitle = styled.label`
     margin-bottom: 0;
     font-weight: bold;
     font-size: 20px;
-    color: #FFFFFF;
 `;
 
 
