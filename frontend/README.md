@@ -54,3 +54,10 @@
 * Link para a instalação completa
 	* https://react-google-charts.com/
 <hr>
+
+## react-loading
+     yarn add @agney/react-loading
+
+* Link para a instalação completa
+	* https://reactjsexample.com/simple-and-accessible-loading-indicators-with-react/
+<hr>
