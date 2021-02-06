@@ -6,12 +6,14 @@ import Home from './components/Home';
 import About from './components/About';
 import PanelCovid from './components/PanelCovid';
 import Information from './components/Information';
+import Graphic from './components/Graphic';
 
 const routes ={
   '/': () => <HomeScreen />,
   '/home': () => <Home />,
   '/sobre': () => <About />,
   '/painelCovid': () => <PanelCovid />,
+  '/graficos': () => <Graphic />,
   '/information/:id': ({id}) => <Information id={id}/>
   
 }

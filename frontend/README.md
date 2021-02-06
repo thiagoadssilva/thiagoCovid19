@@ -47,3 +47,10 @@
 * Referências: https://material-ui.com/pt/getting-started/installation/
 
 <hr>
+
+## React-google-charts
+     yarn add react-google-charts --save
+
+* Link para a instalação completa
+	* https://react-google-charts.com/
+<hr>

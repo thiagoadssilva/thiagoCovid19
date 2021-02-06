@@ -13,7 +13,7 @@ export const ContainerBlue = styled.div`
 
 export const ContainerTitle = styled.h1`
     margin: 15px;
-    color: #EEEEEE;
+    color: #000000;
 `;
 export const ContainerInformation = styled.p`
     margin: 15px;
@@ -21,11 +21,11 @@ export const ContainerInformation = styled.p`
     padding-left: 15px;
     font-size: 25px;
     align-items: left;
-    color: #EEEEEE;
+    color: #000000;
 `;
 
 export const ContainerHr = styled.hr`
-    border-top: 2px solid #EEEEEE;
+    border-top: 2px solid #000000;
     width: 100%;
     margin-top: 0;
 `;

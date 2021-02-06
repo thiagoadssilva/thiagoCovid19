@@ -45,7 +45,7 @@ export const Information = styled.div`
 `;
 
 export const TitleWarning = styled.h2`
-    font-weight: bold;
+    font-weight: bold; 
 `;
 export const DescriptionWarning = styled.text`
     font-size: 25px;

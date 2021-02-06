@@ -21,7 +21,7 @@ export default () => {
             Home
           </A>
           <A href="/graficos">
-            Graficos
+            Mapa da Covid - 19
           </A>
 
           <A href="/painelCovid">
