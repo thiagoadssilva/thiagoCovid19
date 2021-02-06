@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     height: ${props => props.control ? '100vh' : ''};
+  
 `;
 
 export const Teste = styled.div`
     display: flex;
     justify-content: space-between;
     width: 80%;
+    
+    
 `;
 
 export const ContainerTitleInformation = styled.h2`
@@ -19,10 +22,17 @@ export const ContainerInformation = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0085FF;
+    background-color: #FFFFFF;
     margin: 15px;
     height: 180px;  
     border-radius: 15px;
+    
+    transition:all 0.3s ease;
+    &:hover{
+        background-color: #CCC;
+    }
+   
+
 `;
 
 export const ContainerCases = styled.div`
@@ -30,7 +40,7 @@ export const ContainerCases = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85C3FF;
+    background-color: #02c39a;
     width: 200px;
     height: 100px;
     border-radius: 15px;
@@ -40,7 +50,7 @@ export const ContainerSuspects = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85C3FF;
+    background-color: #02c39a;
     width: 200px;
     height: 100px;
     border-radius: 15px;
@@ -50,7 +60,7 @@ export const ContainerDeaths = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85C3FF;
+    background-color: #dc2f02;
     width: 200px;
     height: 100px;
     border-radius: 15px;

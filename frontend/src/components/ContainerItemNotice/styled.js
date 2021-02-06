@@ -11,7 +11,7 @@ export const ContainerItem = styled.div`
   width: 400px;
   height: 100px;
   border-radius: 10px;
-  background-color: ${props => props.text ? '#85C3FF' : 'none' } ;
+  background-color: ${props => props.text ? '#FFFFFF' : 'none' } ;
   margin: 10px;
   font-weight: bold;
   font-size: 25px;
@@ -20,7 +20,7 @@ export const ContainerItem = styled.div`
   margin-bottom: 15px;
 
   &:hover{
-    background-color: ${props => props.text ? '#006FCE' : 'none' } ;    
+    background-color: ${props => props.text ? '#CCCCCC' : 'none' } ;    
   }
 
 `;

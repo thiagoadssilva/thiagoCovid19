@@ -17,19 +17,18 @@ export const ContainerFilterRadio = styled.div`
     width: 200px;
     height: 150px;
     border-radius: 15px;
-    background-color: #0085FF;
+    background-color: #FFFFFF;
 `;
 
 export const ContainerFilterSearch = styled.div`
-    display: flex;
+    display: ${props => props.displayControlState ? 'none' : 'flex'};
     flex-direction: column;
     justify-content: center;
-    flex: 1;
     margin: 15px;
-    width: 150px;
+    width: 300px;
     height: 150px;
     border-radius: 15px;
-    background-color: #0085FF;
+    background-color: #FFFFFF;
 `;
 
 export const ContainerSelect = styled.div`

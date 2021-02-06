@@ -19,10 +19,16 @@ export const ContainerInformation = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0085FF;
+    background-color: #FFFFFF;
     margin: 15px;
     height: 180px;  
     border-radius: 15px;
+
+    transition:all 0.3s ease;
+    &:hover{
+        background-color: #CCC;
+        
+    }
 `;
 
 export const ContainerCases = styled.div`
@@ -30,32 +36,68 @@ export const ContainerCases = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85C3FF;
+    background-color: #02c39a;
     width: 200px;
     height: 100px;
     border-radius: 15px;
+
+    transition:all 0.3s ease;
+    &:hover {
+        background-color: #02c39a;
+    }
 `;
+
 export const ContainerSuspects = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85C3FF;
+    background-color: #02c39a;
     width: 200px;
     height: 100px;
     border-radius: 15px;
+
+    transition:all 0.3s ease;
+    &:hover {
+        background-color: #02c39a;
+    }
 `;
+
+export const ContainerRecovered = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #02c39a;
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 0;
+
+    transition:all 0.3s ease;
+    &:hover {
+        background-color: #02c39a;
+    }
+`;
+
 export const ContainerDeaths = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #85C3FF;
+    background-color: #dc2f02;
     width: 200px;
     height: 100px;
     border-radius: 15px;
     margin-bottom: 0;
+
+    transition:all 0.3s ease;
+    &:hover {
+        background-color: #dc2f02;
+    }
 `;
+
+
 
 export const CasesDeaths = styled.label`
     display: flex;

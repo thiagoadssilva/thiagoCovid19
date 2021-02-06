@@ -8,7 +8,8 @@ import {
   Container,
   ContainerImageHomeScreen,
   ContainerLogin,
-  ContainerLabelLogin
+  ContainerLabelLogin,
+  ContainerVersao
 } from './styled';
 
 export default () => {
@@ -20,6 +21,10 @@ export default () => {
         <ContainerLabelLogin>
           Estatísticas
         </ContainerLabelLogin>
+        <ContainerVersao>
+          (Versão WEB)
+        </ContainerVersao>
+
 
         <A href="/home">
           <Button variant="contained">Entrar</Button>

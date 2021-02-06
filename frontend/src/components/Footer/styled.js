@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerFooter = styled.div`
-  background-color: #EEEEEE;
+  background-color: #CCCCCC;
   display: flex;
   justify-content: space-between;
   align-items: center;

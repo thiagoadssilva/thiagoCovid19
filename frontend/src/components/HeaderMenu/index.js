@@ -1,5 +1,5 @@
 import React from 'react';
-import imageCovid from '../../image/home.jpg';
+import imageCovid from '../../image/covid.png';
 import { A } from 'hookrouter';
 import imageLogout from '../../image/sair.ico';
 

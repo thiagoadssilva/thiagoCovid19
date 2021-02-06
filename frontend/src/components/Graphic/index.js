@@ -7,7 +7,7 @@ import { FormControl, RadioGroup, FormControlLabel, Radio } from '@material-ui/c
 
 import {
   Container,
-  ContainerGraphic,
+  ContainerGraphic
 } from './styled';
 
 export default () => {
@@ -15,7 +15,6 @@ export default () => {
   const [result, setResult] = useState([]);
   const chartData = [['', '']];
   const [valueRadio, setValueRadio] = useState('cases');
-
 
   useEffect(() => {
     async function handleLoadInformation() {
@@ -57,35 +56,35 @@ export default () => {
 
       <HeaderMenu />
 
-      <ContainerGraphic>
-        <FormControl component="fieldset">
-          <RadioGroup aria-label="gender" name="gender1" value={valueRadio} onChange={handleChangeRadio} >
-            <FormControlLabel style={{ margin: 0 }} value="cases" control={<Radio size='small' />} label="Casos" />
-            <FormControlLabel style={{ margin: 0 }} value="confirmed" control={<Radio size='small' />} label="Confirmados" />
-            <FormControlLabel style={{ margin: 0 }} value="deaths" control={<Radio size='small' />} label="Mortos" />
-            <FormControlLabel style={{ margin: 0 }} value="recovered" control={<Radio size='small' />} label="Recuperados" />
-          </RadioGroup>
-        </FormControl>
+        <ContainerGraphic>
+          <FormControl component="fieldset">
+            <RadioGroup aria-label="gender" name="gender1" value={valueRadio} onChange={handleChangeRadio} >
+              <FormControlLabel style={{ margin: 0 }} value="cases" control={<Radio size='small' />} label="Casos" />
+              <FormControlLabel style={{ margin: 0 }} value="confirmed" control={<Radio size='small' />} label="Confirmados" />
+              <FormControlLabel style={{ margin: 0 }} value="deaths" control={<Radio size='small' />} label="Mortos" />
+              <FormControlLabel style={{ margin: 0 }} value="recovered" control={<Radio size='small' />} label="Recuperados" />
+            </RadioGroup>
+          </FormControl>
 
-        <Chart
-          width={'90%'}
-          chartType="GeoChart"
-          data={chartData}
-          options={{
-            title: "Mapa da Covid",
-            colorAxis: { colors: ['#02C39A', '#00A896', '#028090'] },
-            backgroundColor: '#0085FF',
-            defaultColor: '#CCCCCC',
-          }}
-          // Note: you will need to get a mapsApiKey for your project.
-          // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-          mapsApiKey="AIzaSyDESaxjIkBlzXlsFcMC5cKlk4_LHNMp74I"
-          rootProps={{ 'data-testid': '2' }}
-        />
-      </ContainerGraphic>
+          <Chart
+            width={'90%'}
+            chartType="GeoChart"
+            data={chartData}
+            options={{
+              title: "Mapa da Covid",
+              colorAxis: { colors: ['#02C39A', '#00A896', '#028090'] },
+              backgroundColor: '#FFFFFF',
+              defaultColor: '#CCCCCC',
+            }}
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            mapsApiKey="AIzaSyDESaxjIkBlzXlsFcMC5cKlk4_LHNMp74I"
+            rootProps={{ 'data-testid': '2' }}
+          />
+        </ContainerGraphic>
 
       <Footer />
-      
+
     </Container>
   );
 }

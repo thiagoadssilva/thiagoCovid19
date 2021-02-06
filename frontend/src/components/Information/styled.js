@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerBlue = styled.div`
-    background-color: #0085FF;
+    background-color: #FFFFFF;
     margin: 15px;
     border-radius: 10px;
     height: 100vh;

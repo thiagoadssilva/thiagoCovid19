@@ -18,7 +18,7 @@ export const Warning = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #0085FF;
+    background-color: #FFFFFF;
     border-radius: 15px;
     height: 150px;
     padding: 20px;
@@ -28,7 +28,7 @@ export const Update = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #85C3FF;
+    background-color: #CCCCCC;
     border-radius: 15px;
     height: 150px;
     padding: 20px;
@@ -38,7 +38,7 @@ export const Information = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #0085FF;
+    background-color: #FFFFFF;
     border-radius: 15px;
     height: 150px;
     padding: 20px;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 80px;
   width: 100%;
-  background-color: #EEEEEE;
+  background-color: #CCCCCC;
 `;
 
 export const ContainerHeader = styled.div`
@@ -13,8 +13,10 @@ export const ContainerHeader = styled.div`
 `;
 
 export const ContainerImage = styled.img`
+  margin-left: 15px;
+  padding: 5px;
   height: 80px;
-  width: 100px;
+  width: 80px;
 `;
 
 export const ContainerImageLogou = styled.img`

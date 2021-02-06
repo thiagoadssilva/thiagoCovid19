@@ -26,3 +26,8 @@ export const ContainerLabelLogin = styled.text`
     text-shadow: 1px 2px;
     color: #FFFFFF;
 `;
+
+export const ContainerVersao = styled.text`
+    color: #CCC;
+    font-weight: bold;
+`;

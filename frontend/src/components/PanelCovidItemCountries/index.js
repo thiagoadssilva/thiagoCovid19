@@ -11,7 +11,8 @@ import {
   CasesLabel,
   ContainerTitleInformation,
   ContainerHr,
-  Teste
+  Teste,
+  ContainerRecovered
 } from './styled';
 
 export default (props) => {
@@ -38,6 +39,14 @@ export default (props) => {
             </CasesSuspects>
             {props.item.confirmed.toLocaleString('pt-BR')}
           </ContainerSuspects>
+          
+          <ContainerRecovered>
+            <CasesDeaths>
+              Recuperados
+              <ContainerHr />
+            </CasesDeaths>
+            {props.item.recovered}
+          </ContainerRecovered>
 
           <ContainerDeaths>
             <CasesDeaths>
@@ -47,13 +56,6 @@ export default (props) => {
             {props.item.deaths.toLocaleString('pt-BR')}
           </ContainerDeaths>
 
-          <ContainerDeaths>
-            <CasesDeaths>
-              Recuperados
-              <ContainerHr />
-            </CasesDeaths>
-            {props.item.recovered}
-          </ContainerDeaths>
         </Teste>
       </ContainerInformation>
     </Container>
