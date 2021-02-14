@@ -15,7 +15,7 @@
 - http://covid19.tfcoder.com/
 
 <hr/>
-
+<!-- 
 ## <b>HOME SCREEN</b> 
 
 ![Tela Principal](image/HomeScreen.png)
@@ -87,4 +87,4 @@
 
 ![Tela Principal](image/fakenews.png)
 
-<hr>
+<hr> -->
