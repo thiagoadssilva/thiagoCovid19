@@ -5,11 +5,21 @@ export const Container = styled.div`
     background-color: #000000;
     display: flex;
     justify-content: center; 
+
+    @media (max-width: 810px){
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export const ContainerImageHomeScreen = styled.img`
     width: 1000px;
     height: 100vh;
+
+    @media (max-width: 810px){
+        width: auto;
+        height: auto;
+    }
 `;
 
 export const ContainerLogin = styled.div`
@@ -25,6 +35,10 @@ export const ContainerLabelLogin = styled.text`
     font-size: 70px;
     text-shadow: 1px 2px;
     color: #FFFFFF;
+
+    @media (max-width: 810px){
+        font-size: 50px;
+    }
 `;
 
 export const ContainerVersao = styled.text`
