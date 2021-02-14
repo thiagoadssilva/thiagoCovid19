@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container =  styled.div`
-height: 100%;
+  height: auto;
 `;
 
 export const ContainerItem = styled.div`
@@ -23,4 +23,9 @@ export const ContainerItem = styled.div`
     background-color: ${props => props.text ? '#CCCCCC' : 'none' } ;    
   }
 
+  @media (max-width: 810px){
+    width: 300px;
+    height: 80px; 
+    font-size: 15px;
+  }
 `;

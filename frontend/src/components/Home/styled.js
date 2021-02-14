@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: #000000;
   height: 100%;
+  
   a{
     text-decoration: none;
     color: #000000;
   }
+
 `;
 
 export const ContainerItemHome = styled.div`
@@ -15,8 +17,12 @@ export const ContainerItemHome = styled.div`
   align-items: center;
   flex-wrap: wrap;
   background-color: #000000;
-  height: 100vh;
+  height: auto;
   border-radius: 15px;
+
+  @media (max-width: 810px){
+
+  }
 `;
 
 

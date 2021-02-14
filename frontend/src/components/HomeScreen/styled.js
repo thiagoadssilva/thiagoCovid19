@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100vh;
+    height: 100%;
     background-color: #000000;
     display: flex;
     justify-content: center; 
@@ -27,6 +27,7 @@ export const ContainerLogin = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 `;
 
 export const ContainerLabelLogin = styled.text`
@@ -43,5 +44,5 @@ export const ContainerLabelLogin = styled.text`
 
 export const ContainerVersao = styled.text`
     color: #CCC;
-    font-weight: bold;
+    font-weight: bold;    
 `;
