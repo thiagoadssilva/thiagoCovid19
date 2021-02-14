@@ -60,10 +60,10 @@ export default () => {
 
           </DescriptionInformation>
         </Information>
-
+        
       </ContainerBody>
 
-      <Footer />
+      <Footer />   
     </Container>
   );
 }

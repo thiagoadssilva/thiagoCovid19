@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container =  styled.div`
   height: auto;
+  
 `;
 
 export const ContainerItem = styled.div`
@@ -23,7 +24,7 @@ export const ContainerItem = styled.div`
     background-color: ${props => props.text ? '#CCCCCC' : 'none' } ;    
   }
 
-  @media (max-width: 810px){
+  @media (max-width: 1010px){
     width: 300px;
     height: 80px; 
     font-size: 15px;

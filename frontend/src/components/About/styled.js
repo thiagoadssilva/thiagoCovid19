@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background-color: #000000;
-    height: 100%;
+    height: 100vh;
 
+    margin-bottom: 50px;
+   
     @media (max-width: 810px){
         display: flex;
         justify-content: center;
         flex-direction: column;        
+        
     }
 
     

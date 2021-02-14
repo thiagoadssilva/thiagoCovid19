@@ -8,11 +8,12 @@ export const Container = styled.div`
   @media (max-width: 1100px){
     display: flex;
     justify-content: center;
+    //background-color: #000000;
   }
 
-  @media (max-width: 809px){
+  /* @media (max-width: 809px){
     height: 80px;
-  }
+  } */
 
 `;
 
@@ -20,16 +21,17 @@ export const ContainerMenuPizza = styled.div`
   padding: 15px;
   font-size: 30px;
   flex: 1;
+  //color: #FFFFFF;
 
   .openMenu{
     cursor: pointer;
   }
   
 
-  @media (max-width: 809px){
+  @media (max-width: 1010px){
     display: block;
   }
-  @media (min-width: 810px){
+  @media (min-width: 1010px){
     display: none;
   }
 `;
@@ -40,14 +42,14 @@ export const ContainerImage = styled.img`
   height: 80px;
   width: 80px;
 
-  @media (max-width: 1100px){
+  /* @media (max-width: 1100px){
     width: 40px;
     height: 40px;
-  }  
+  }   */
 
-  @media (max-width: 810px){
+  /* @media (max-width: 810px){
     display: none;
-  }
+  } */
 `;
 
 export const ContainerImage2= styled.img`
@@ -62,10 +64,10 @@ export const ContainerImageLogou = styled.img`
   height: 20px;
   margin-left: 5px;
 
-  @media (max-width: 1100px){
+  /* @media (max-width: 1100px){
     width: 10px;
     height: 10px;
-  }  
+  }   */
 `;
 
 export const ContainerMenus = styled.div`
@@ -86,11 +88,11 @@ export const ContainerMenus = styled.div`
       font-weight: bold;
     }
 
-    @media (max-width: 1100px){
+    /* @media (max-width: 1100px){
       font-size: 15px;
-    }  
+    }   */
 
-    @media (max-width: 810px){
+    @media (max-width: 1010px){
       display: none;
     }
   }

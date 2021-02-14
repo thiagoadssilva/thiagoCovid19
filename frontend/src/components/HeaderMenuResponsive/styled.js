@@ -5,6 +5,7 @@ export const Container = styled.div`
   position: absolute;
   z-index: 9999;
   border-radius: 15px;
+  border: solid 1px #FFF;
 `;
 
 export const ContainerImage = styled.img`

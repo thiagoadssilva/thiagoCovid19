@@ -8,6 +8,12 @@ export const Teste = styled.div`
     display: flex;
     justify-content: space-between;
     width: 80%;
+
+    @media (max-width: 810px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const ContainerTitleInformation = styled.h2`
@@ -29,6 +35,14 @@ export const ContainerInformation = styled.div`
         background-color: #CCC;
         
     }
+
+    @media (max-width: 810px){
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
 `;
 
 export const ContainerCases = styled.div`
@@ -41,9 +55,8 @@ export const ContainerCases = styled.div`
     height: 100px;
     border-radius: 15px;
 
-    transition:all 0.3s ease;
-    &:hover {
-        background-color: #02c39a;
+    @media (max-width: 810px){
+        display: flex;        
     }
 `;
 
@@ -57,9 +70,8 @@ export const ContainerSuspects = styled.div`
     height: 100px;
     border-radius: 15px;
 
-    transition:all 0.3s ease;
-    &:hover {
-        background-color: #02c39a;
+    @media (max-width: 810px){
+        margin-top: 15px;       
     }
 `;
 
@@ -74,9 +86,8 @@ export const ContainerRecovered = styled.div`
     border-radius: 15px;
     margin-bottom: 0;
 
-    transition:all 0.3s ease;
-    &:hover {
-        background-color: #02c39a;
+    @media (max-width: 810px){
+        margin-top: 15px;               
     }
 `;
 
@@ -91,9 +102,8 @@ export const ContainerDeaths = styled.div`
     border-radius: 15px;
     margin-bottom: 0;
 
-    transition:all 0.3s ease;
-    &:hover {
-        background-color: #dc2f02;
+    @media (max-width: 810px){
+        margin-top: 15px;               
     }
 `;
 

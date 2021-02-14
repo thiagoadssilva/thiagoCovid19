@@ -1,19 +1,30 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: #000000;  
+    background-color: #FFFFFF;  
+    
 `;
 
 export const ContainerBlue = styled.div`
     background-color: #FFFFFF;
     margin: 15px;
     border-radius: 10px;
-    height: 100vh;
+    margin-bottom: 70px;
+
+    @media (max-width: 1010px){
+        font-size: 16px;
+        margin-bottom: 70px;
+        
+    }
 `;
 
 export const ContainerTitle = styled.h1`
     margin: 15px;
     color: #000000;
+
+    @media (max-width: 1010px){
+        font-size: 25px;
+    }
 `;
 export const ContainerInformation = styled.p`
     margin: 15px;
@@ -22,6 +33,11 @@ export const ContainerInformation = styled.p`
     font-size: 25px;
     align-items: left;
     color: #000000;
+
+    @media (max-width: 1010px){
+        font-size: 16px;
+    }
+
 `;
 
 export const ContainerHr = styled.hr`

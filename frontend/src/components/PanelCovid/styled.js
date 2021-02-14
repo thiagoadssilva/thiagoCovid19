@@ -3,11 +3,18 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background-color: #000000;
+    margin-bottom: auto;
 `;
 
 export const ContainerFilter = styled.div`
     display: flex;
     justify-content: center;
+
+    @media (max-width: 810px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const ContainerFilterRadio = styled.div`
@@ -18,6 +25,10 @@ export const ContainerFilterRadio = styled.div`
     height: 150px;
     border-radius: 15px;
     background-color: #FFFFFF;
+    
+    @media (max-width: 810px){
+        width: 80%;
+    }
 `;
 
 export const ContainerFilterSearch = styled.div`
@@ -29,6 +40,10 @@ export const ContainerFilterSearch = styled.div`
     height: 150px;
     border-radius: 15px;
     background-color: #FFFFFF;
+    
+    @media (max-width: 810px){
+        width: 80%;
+    }
 `;
 
 export const ContainerSelect = styled.div`

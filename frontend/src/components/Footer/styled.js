@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    /* position: fixed;
+    position: fixed;
     bottom:0;
     left:0;
-    width: 100%; */
+    width: 100%;
+    
 `;
 
 export const ContainerFooter = styled.div`
