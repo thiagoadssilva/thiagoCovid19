@@ -7,9 +7,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  
 `;
 
 export const ContainerImage = styled.img`
@@ -26,6 +24,8 @@ export const ContainerImageLogou = styled.img`
 `;
 export const ContainerMenus = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   
   a{
     font-size: 25px;
@@ -34,9 +34,12 @@ export const ContainerMenus = styled.div`
     text-decoration-line:none;
     color: black;
 
+    transition: 0.3s;
+
     &:hover{
       font-weight: bold;
     }
+
   }
 `;
 

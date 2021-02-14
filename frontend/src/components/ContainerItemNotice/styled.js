@@ -15,7 +15,7 @@ export const ContainerItem = styled.div`
   margin: 10px;
   font-weight: bold;
   font-size: 25px;
-  transition: 0.1s;
+  transition: 0.5s;
   margin: 15px;
   margin-bottom: 15px;
 

@@ -2,6 +2,8 @@ import React from 'react';
 import imageCovid from '../../image/covid.png';
 import { A } from 'hookrouter';
 import imageLogout from '../../image/sair.ico';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import {
   Container,
@@ -15,8 +17,12 @@ export default () => {
   return (
     <Container>
       <ContainerHeader>
-        <ContainerImage src={imageCovid} alt="Covid" />
+        {/* <FontAwesomeIcon icon={faBars} /> */}
+
         <ContainerMenus>
+
+          <ContainerImage src={imageCovid} alt="Covid" />
+          
           <A href="/home">
             Home
           </A>
