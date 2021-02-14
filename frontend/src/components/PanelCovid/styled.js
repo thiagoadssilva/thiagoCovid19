@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-    background-color: #000000;
+    background-color: #FFF;
     margin-bottom: auto;
 `;
 
@@ -24,7 +24,7 @@ export const ContainerFilterRadio = styled.div`
     width: 200px;
     height: 150px;
     border-radius: 15px;
-    background-color: #FFFFFF;
+    background-color: #CCC;
     
     @media (max-width: 810px){
         width: 80%;
@@ -39,7 +39,7 @@ export const ContainerFilterSearch = styled.div`
     width: 300px;
     height: 150px;
     border-radius: 15px;
-    background-color: #FFFFFF;
+    background-color: #CCC;
     
     @media (max-width: 810px){
         width: 80%;

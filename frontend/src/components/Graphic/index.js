@@ -7,7 +7,9 @@ import { FormControl, RadioGroup, FormControlLabel, Radio } from '@material-ui/c
 
 import {
   Container,
-  ContainerGraphic
+  ContainerGraphic,
+  ContainerChart,
+  ContainerForm
 } from './styled';
 
 export default () => {
@@ -56,20 +58,24 @@ export default () => {
 
       <HeaderMenu />
 
-        <ContainerGraphic>
-          <FormControl component="fieldset">
-            <RadioGroup aria-label="gender" name="gender1" value={valueRadio} onChange={handleChangeRadio} >
+      <ContainerGraphic>
+
+        <ContainerForm>
+          <FormControl component="fieldset" >
+            <RadioGroup row aria-label="gender" name="gender1" value={valueRadio} onChange={handleChangeRadio}>
               <FormControlLabel style={{ margin: 0 }} value="cases" control={<Radio size='small' />} label="Casos" />
               <FormControlLabel style={{ margin: 0 }} value="confirmed" control={<Radio size='small' />} label="Confirmados" />
               <FormControlLabel style={{ margin: 0 }} value="deaths" control={<Radio size='small' />} label="Mortos" />
               <FormControlLabel style={{ margin: 0 }} value="recovered" control={<Radio size='small' />} label="Recuperados" />
             </RadioGroup>
           </FormControl>
+        </ContainerForm>
 
+        <ContainerChart>
           <Chart
-            width={'90%'}
             chartType="GeoChart"
             data={chartData}
+            width= 'auto'
             options={{
               title: "Mapa da Covid",
               colorAxis: { colors: ['#02C39A', '#00A896', '#028090'] },
@@ -81,7 +87,8 @@ export default () => {
             mapsApiKey="AIzaSyDESaxjIkBlzXlsFcMC5cKlk4_LHNMp74I"
             rootProps={{ 'data-testid': '2' }}
           />
-        </ContainerGraphic>
+        </ContainerChart>
+      </ContainerGraphic>
 
       <Footer />
 

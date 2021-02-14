@@ -1,23 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: #000000;
-    height: 100vh;
-
-    margin-bottom: 50px;
-   
+    background-color: #FFF;
+    margin-bottom: 60px;
+    
     @media (max-width: 810px){
         display: flex;
         justify-content: center;
         flex-direction: column;        
-        
+        margin-bottom: 50px;
     }
 
     
 `;
 
 export const ContainerBody = styled.div`
-    //background-color: #000000;
+   //background-color: #000000;
     margin: 15px;
 
 `;

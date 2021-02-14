@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100%;
+    height: 100vh;
     background-color: #000000;
     display: flex;
     justify-content: center; 
@@ -13,8 +13,8 @@ export const Container = styled.div`
 `;
 
 export const ContainerImageHomeScreen = styled.img`
-    width: 1000px;
-    height: 100vh;
+    width: auto;
+    height: auto;
 
     @media (max-width: 810px){
         width: auto;
@@ -28,6 +28,7 @@ export const ContainerLogin = styled.div`
     justify-content: center;
     align-items: center;
     padding: 15px;
+
 `;
 
 export const ContainerLabelLogin = styled.text`

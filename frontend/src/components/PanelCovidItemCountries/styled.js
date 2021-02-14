@@ -25,14 +25,13 @@ export const ContainerInformation = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: #CCC;
     margin: 15px;
     height: 180px;  
     border-radius: 15px;
 
     transition:all 0.3s ease;
     &:hover{
-        background-color: #CCC;
         
     }
 

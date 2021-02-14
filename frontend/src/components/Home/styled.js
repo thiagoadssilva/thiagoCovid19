@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #000000;
   height: 100vh;
   
   a{
@@ -16,9 +15,8 @@ export const ContainerItemHome = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #000000;
+  background-color: #FFF;
   height: auto;
-  border-radius: 15px;
 
   @media (max-width: 1010px){
     padding-bottom: 70px;

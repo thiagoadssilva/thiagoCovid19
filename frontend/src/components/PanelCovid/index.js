@@ -169,7 +169,7 @@ export default () => {
               Informe o Estado:
                 </ContainerSelectTitle>
             <ContainerSelect>
-              <select style={{ backgroundColor: '#CCCCCC' }} onChange={handleChangeSelectState} className="browser-default custom-select">
+              <select style={{ backgroundColor: '#FFF' }} onChange={handleChangeSelectState} className="browser-default custom-select">
                 <option value="">Selecione</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>
@@ -207,7 +207,7 @@ export default () => {
                 Informe o País:
                   </ContainerSelectTitle>
               <ContainerSelect>
-                <select style={{ backgroundColor: '#CCCCCC' }} onChange={handleChangeSelectCountry} className="browser-default custom-select">
+                <select style={{ backgroundColor: '#FFF' }} onChange={handleChangeSelectCountry} className="browser-default custom-select">
                   <option value="">Selecione</option>
                   <option value="Afghanistan">Afeganistão</option>
                   <option value="Albania">Albânia</option>

@@ -8,15 +8,32 @@ export const Container = styled.div`
 
 export const ContainerGraphic = styled.div`
     display:flex;
+    align-items: center;
     background-color: #FFFFFF;
+    flex-direction: column;
+    
     //margin: 15px;
     //padding: 15px;
 
     @media (max-width: 1010px){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        padding: 15px;
     }
+`;
+
+export const ContainerChart = styled.div`
+    height: auto;
+    width: auto;
+    margin: 15px;
+    background-color: #CCC;
+    width: 100vw;
+    
+`;
+
+export const ContainerForm = styled.div`
+    background-color: #CCC;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    @media (min-width: 1010px){
+        margin: 5px;
+    } 
 `;
